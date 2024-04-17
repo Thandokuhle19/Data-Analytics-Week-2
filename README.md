@@ -109,3 +109,4 @@ _Integration:_
 - There is a variety of methods to transfer data efficiently and effectively, and one way is know as extract, transform, and load (ETL).
 - This method consists of three phases:
             1. Extract: extract data from the source system and place it in a staging area. Goal is to move data from a relational database into a flat file as quickly as possible.
+            2. 
