@@ -67,4 +67,45 @@ _Normalization:_
 
 _Online Analytical Processing:_
 - OLAP systems focus on the ability of organization to analyse data.
+- OLAP and OLTP databases both use relational database technology, however their structures are fundamentally different.
+- In such that OLTP databases need to balance read and write peformance which results in a highly normalised design. They are in 3NF.
+- Databases that power OLAP systems have a denormalised design.
+- Instead of having data distrubuted across multiple tables, denormalisation results in wider tables than those found in an OLTP database.
+- It is more efficient for analytical queries to read large amounts of data for a single table instead of incurring the cost of joining multiple tables together.
+
+_Schema Concepts:_
+- The design of a databse schema depends on the purpose it serves.
+- Transactional systems need highly normalised databases, whereas a denormalised design is more appropriate for analytical systems.
+- A data warehouse is a database that is a collection of data from many transanctional systems for analytical purposes.
+- Transactional data come from systems that power the human resources, sales, marketing, and product divisions.
+- A data warehouse it makes it easier for analytics across the entire company.
+- Data mart: a subset of a data warehouse. Data warehouses serve the entire organisation, whereby data marts focus on the needs of a particular department within the organisation.
+- Data lake: stores raw data in its native format instead of conforming to a relational database structure.
+- It is important to establish that the structure of a database schema impacts analytical efficiency, mainly as the volume of data grows.
+- It is important to consider the life-cycle. Life-cycle considerations include where data comes from, how frequently it changes, and how long it needs to persist.
+- We have two types of schema design:
+            - Star: facilitate analytical processing get its name from what the schema looks like when                        looking at its entity relationship. Are denormalised to improve read performance                         over large datasets. We usually have a fact table at the centre of star, and its                         purpose is to store numerical facts about a business.
+            - Snowflake: dimensions have subcategories, which gives the snowflake design its shape. It                            is less denormalised than the star schema.
+- The amount of storage a database needs decreases as a function of the degree of normalisation. OLTP - highly normalised, OLAP - denormalised.
+
+_Dimensionality:_
+- Dimensionality: number of attributes a table has. Greater the number of attributes, the higher the dimensionality/
+- Dimension table provides additional context around data in fact tables.
+- It is important to understand the types of question an analyst will need to answer when designing dimension tables.
+- One dimension you will encounter is time, you need to answer quesions about when something happened or when something is true.
+- To accomplish this is to add a start and end date of each product's price.
+- Consider a geographic dimension which changes over time.
+
+_Handling Dimensionality:_
 - 
+
+_Data Acquisition Concepts:_
+- To perform analytics, data is needed. Data can come form internal systems you operate, or you can obtain it from third-part sources.
+- You need to get data before analysing it to derive additional value.
+
+_Integration:_
+- Data from transactional systems flow into data warehouses and data marts for analysis.
+- Retrieve, reshape, and insert data to move dara between operational and analytical environments.
+- There is a variety of methods to transfer data efficiently and effectively, and one way is know as extract, transform, and load (ETL).
+- This method consists of three phases:
+            1. Extract: extract data from the source system and place it in a staging area. Goal is to move data from a relational database into a flat file as quickly as possible.
