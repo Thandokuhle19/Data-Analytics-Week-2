@@ -151,4 +151,26 @@ _Working With Data:_
 - DDL allows you to creat, modify, and delete tables and other associated database objects.
 - A productive analyst use Data Manipulation Languagae (DML) capabilities of SQL to get generate insights. SQL inserts, modify and retrieve information from databases.
 - DDL - manages the structure of a database, DML - manages the data in the database.
+
+_Data Manipulation:_
+- These are four ways to manipulate:
+          1. Create new data 
+          2. Read exisiting data
+          3. Update existing data
+          4. Delete existing data
+- DML verbs are known as keywords or words that are paaart pf the SQL language itself.
+- The operation below shows the SQL Keyword and description.
+- Create - INSERT - creates a new data in an existing table
+- Read - SELECT - retrives data
+- Update - UPDATE - changes existing data
+- Delete - DELETE - removes existing data
+- SELECT, FROM, and WHERE are all reserved words specific meanings in SQL.
+- SELECT - identifies the columns from the table(s) that are retrieved. Eg, SELECT Animal_Name, Breed_Name.
+- FROM - identifies the source data, which is from the database table.
+- Both SELECT and FROM are required for a SQL statement to return data as follows:
+                - SELECT Animal_Name, Breed_Name
+                - FROM Animal
+
+_SQL CONSIDERATIONS:_
+- SQL keywords are case-insensitive. But, the case-sensitivity of column names and values depend on the database configuration.
 - 
