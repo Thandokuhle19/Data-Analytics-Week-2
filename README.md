@@ -108,5 +108,47 @@ _Integration:_
 - Retrieve, reshape, and insert data to move dara between operational and analytical environments.
 - There is a variety of methods to transfer data efficiently and effectively, and one way is know as extract, transform, and load (ETL).
 - This method consists of three phases:
-            1. Extract: extract data from the source system and place it in a staging area. Goal is to move data from a relational database into a flat file as quickly as possible.
-            2. 
+            1. Extract: first phase - extract data from the source system and place it in a staging area. Goal is to move data from a relational database into a flat file as quickly as possible.
+            2. Transform: second phase - transforms data. Goal is to refromat the data from its transactional structure to the data warehouse's analytical design.
+            3. Load: purpose of this phase is to ensure data gets into analytical system as quickly as possible.
+- With ELT (extract, load, and transform), a variant of ETL, data is extracted from a source database and loaded directly into the data warehouse.
+- Once the extract and load phases are complete, the transformation phase gets moving.
+- Difference between ELT and ETL is the technical component performing the transformation.
+- ETL's data transformations takes place external to a relational database, they use programme language like Python.
+- ELT uses SQL and the power of a relational database to reformat the data.
+- ELT advantage - speed with data moving from the operational to the analytical database.
+- ELT is beneficial when the data warehouse has a lot of capacity.
+
+_ETL Vendors:_
+- Most products support both ETL and ELT.
+- If you want to pick one. evaluate the available free and paid options to establish the best fits your needs and system architecture goals.
+- Initial load shows the first time data is put into a data warehouse.
+- After initial load, each additional load is delta load, which is known as an incremental load.
+- Delta load - moves changes between systems.
+- Initial load happens before data warehouse becomes avaialable for use.
+- Delta interval can happen at any time depending on how fresh the data needs to be.
+- Balance speed and complexity of the overall operation when you move data between systems.
+- Need to be aware of the time avaialble for performing delta loads int your data warehouse.
+- Regardless of how long your batch window is, understand moving current data into the data warehouse without losing history.
+
+_Data Collection Methods:_
+- A good way to improve analytical capabilities in an organisation is to implement augmenting data from transactional systems with external data.
+- A good way to improve your business is through internal data.
+- Improving accurancy of your analysis, you include data about weather, tourism, and your competitors.
+- This additional data can come from various sources.
+- With this, we will have:
+          - Application Programming Interfaces(APIs): structured method to exhange information for computers
+          - Web Services: an API you can call via Hypertext Transfer Protocol(HTTP)
+          - Web Scraping: programmatic retrival of data
+          - Human-in-the-Loop
+          - Surveys: way to collect data directly from customers is by conducting a survey
+          - Survey Tools: powerful tool for developing and administrating surveys is qualtrics
+          - Observation: act of collecting primary source data, from either machines or people.
+          - Sampling
+
+_Working With Data:_
+- To turn a database design into an operational database ready to acceot data, you use the Data Definition Language(DDL) components of SQL.
+- DDL allows you to creat, modify, and delete tables and other associated database objects.
+- A productive analyst use Data Manipulation Languagae (DML) capabilities of SQL to get generate insights. SQL inserts, modify and retrieve information from databases.
+- DDL - manages the structure of a database, DML - manages the data in the database.
+- 
